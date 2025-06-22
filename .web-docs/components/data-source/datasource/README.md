@@ -1,18 +1,16 @@
-  Include a short description about the data source. This is a good place
-  to call out what the data source does, and any requirements for the given
-  data source environment. See https://www.packer.io/docs/data-source/amazon-ami
+Include a short description about the data source. This is a good place
+to call out what the data source does, and any requirements for the given
+data source environment. See https://www.packer.io/docs/data-source/amazon-ami
 -->
 
-The scaffolding data source is used to create endless Packer plugins using
+The vergeio data source is used to create endless Packer plugins using
 a consistent plugin structure.
-
 
 <!-- Data source Configuration Fields -->
 
 **Required**
 
-- `mock` (string) - The name of the mock to use for the Scaffolding API.
-
+- `mock` (string) - The name of the mock to use for the VergeIO API.
 
 <!--
   Optional Configuration Fields
@@ -24,10 +22,8 @@ a consistent plugin structure.
 
 **Optional**
 
-- `mock_api_url` (string) - The Scaffolding API endpoint to connect to.
+- `mock_api_url` (string) - The VergeIO API endpoint to connect to.
   Defaults to https://example.com
-
-
 
 <!--
   A basic example on the usage of the data source. Multiple examples
@@ -37,8 +33,8 @@ a consistent plugin structure.
 
 ### OutPut
 
-- `foo` (string) - The Scaffolding output foo value.
-- `bar` (string) - The Scaffolding output bar value.
+- `foo` (string) - The VergeIO output foo value.
+- `bar` (string) - The VergeIO output bar value.
 
 <!--
   A basic example on the usage of the data source. Multiple examples
@@ -48,16 +44,15 @@ a consistent plugin structure.
 
 ### Example Usage
 
-
 ```hcl
-data "scaffolding" "example" {
+data "vergeio" "example" {
    mock = "bird"
  }
- source "scaffolding" "example" {
-   mock = data.scaffolding.example.foo
+ source "vergeio" "example" {
+   mock = data.vergeio.example.foo
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.vergeio.example"]
  }
 ```

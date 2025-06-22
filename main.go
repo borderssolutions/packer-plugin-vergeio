@@ -7,22 +7,22 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hashicorp/packer-plugin-scaffolding/builder/scaffolding"
-	scaffoldingData "github.com/hashicorp/packer-plugin-scaffolding/datasource/scaffolding"
-	scaffoldingPP "github.com/hashicorp/packer-plugin-scaffolding/post-processor/scaffolding"
-	scaffoldingProv "github.com/hashicorp/packer-plugin-scaffolding/provisioner/scaffolding"
-	scaffoldingVersion "github.com/hashicorp/packer-plugin-scaffolding/version"
+	"github.com/borderssolutions/packer-plugin-vergeio/builder/vergeio"
+	vergeioData "github.com/hashicorp/packer-plugin-vergeio/datasource/vergeio"
+	vergeioPP "github.com/hashicorp/packer-plugin-vergeio/post-processor/vergeio"
+	vergeioProv "github.com/hashicorp/packer-plugin-vergeio/provisioner/vergeio"
+	vergeioVersion "github.com/hashicorp/packer-plugin-vergeio/version"
 
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
 )
 
 func main() {
 	pps := plugin.NewSet()
-	pps.RegisterBuilder("my-builder", new(scaffolding.Builder))
-	pps.RegisterProvisioner("my-provisioner", new(scaffoldingProv.Provisioner))
-	pps.RegisterPostProcessor("my-post-processor", new(scaffoldingPP.PostProcessor))
-	pps.RegisterDatasource("my-datasource", new(scaffoldingData.Datasource))
-	pps.SetVersion(scaffoldingVersion.PluginVersion)
+	pps.RegisterBuilder("my-builder", new(vergeio.Builder))
+	pps.RegisterProvisioner("my-provisioner", new(vergeioProv.Provisioner))
+	pps.RegisterPostProcessor("my-post-processor", new(vergeioPP.PostProcessor))
+	pps.RegisterDatasource("my-datasource", new(vergeioData.Datasource))
+	pps.SetVersion(vergeioVersion.PluginVersion)
 	err := pps.Run()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())

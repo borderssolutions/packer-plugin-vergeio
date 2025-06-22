@@ -1,17 +1,15 @@
-  Include a short description about the provisioner. This is a good place
-  to call out what the provisioner does, and any additional text that might
-  be helpful to a user. See https://www.packer.io/docs/provisioner/null
+Include a short description about the provisioner. This is a good place
+to call out what the provisioner does, and any additional text that might
+be helpful to a user. See https://www.packer.io/docs/provisioner/null
 -->
 
-The scaffolding provisioner is used to provisioner Packer builds.
-
+The vergeio provisioner is used to provisioner Packer builds.
 
 <!-- Provisioner Configuration Fields -->
 
 **Required**
 
 - `mock` (string) - The name of the mock string to display.
-
 
 <!--
   Optional Configuration Fields
@@ -23,14 +21,13 @@ The scaffolding provisioner is used to provisioner Packer builds.
 
 **Optional**
 
-
 <!--
   A basic example on the usage of the provisioner. Multiple examples
   can be provided to highlight various configurations.
 
 -->
-### Example Usage
 
+### Example Usage
 
 ```hcl
  source "null" "example" {
@@ -42,7 +39,7 @@ The scaffolding provisioner is used to provisioner Packer builds.
      name = "jay"
    }
 
-   provisioner "scaffolding" {
+   provisioner "vergeio" {
      mock = "mocking ${source.name}"
    }
  }

@@ -31,25 +31,24 @@ $ packer plugins install github.com/organization/plugin-name
 
 ### Components
 
-The Scaffolding plugin is intended as a starting point for creating Packer plugins
+The VergeIO plugin is intended as a starting point for creating Packer plugins
 
 #### Builders
 
-- [builder](/packer/integrations/hashicorp/scaffolding/latest/components/builder/builder-name) - The scaffolding builder is used to create endless Packer
+- [builder](/packer/integrations/hashicorp/vergeio/latest/components/builder/builder-name) - The vergeio builder is used to create endless Packer
   plugins using a consistent plugin structure.
 
 #### Provisioners
 
-- [provisioner](/packer/integrations/hashicorp/scaffolding/latest/components/provisioner/provisioner-name) - The scaffolding provisioner is used to provisioner
+- [provisioner](/packer/integrations/hashicorp/vergeio/latest/components/provisioner/provisioner-name) - The vergeio provisioner is used to provisioner
   Packer builds.
 
 #### Post-processors
 
-- [post-processor](/packer/integrations/hashicorp/scaffolding/latest/components/post-processor/postprocessor-name) - The scaffolding post-processor is used to
-  export scaffolding builds.
+- [post-processor](/packer/integrations/hashicorp/vergeio/latest/components/post-processor/postprocessor-name) - The vergeio post-processor is used to
+  export vergeio builds.
 
 #### Data Sources
 
-- [data source](/packer/integrations/hashicorp/scaffolding/latest/components/datasource/datasource-name) - The scaffolding data source is used to
-  export scaffolding data.
-
+- [data source](/packer/integrations/hashicorp/vergeio/latest/components/datasource/datasource-name) - The vergeio data source is used to
+  export vergeio data.

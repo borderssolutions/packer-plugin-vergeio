@@ -1,4 +1,4 @@
-module github.com/hashicorp/packer-plugin-scaffolding
+module github.com/hashicorp/packer-plugin-vergeio
 
 go 1.23.2
 

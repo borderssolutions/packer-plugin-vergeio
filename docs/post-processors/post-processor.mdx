@@ -1,4 +1,4 @@
-Type: `scaffolding`
+Type: `vergeio`
 
 <!--
   Include a short description about the post-processor. This is a good place
@@ -6,8 +6,7 @@ Type: `scaffolding`
   be helpful to a user. See https://www.packer.io/docs/provisioners/null
 -->
 
-The scaffolding post-processor is used to export Packer Scaffolding builds.
-
+The vergeio post-processor is used to export Packer VergeIO builds.
 
 <!-- Post-Processor Configuration Fields -->
 
@@ -25,26 +24,24 @@ The scaffolding post-processor is used to export Packer Scaffolding builds.
 
 **Optional**
 
-
 <!--
   A basic example on the usage of the post-processor. Multiple examples
   can be provided to highlight various configurations.
 
 -->
+
 ### Example Usage
 
-
 ```hcl
- source "scaffolding" "example" {
+ source "vergeio" "example" {
    mock = "jay"
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.vergeio.example"]
 
-   post-processor "scaffolding" {
-     mock = "builds/scaffolding.box"
+   post-processor "vergeio" {
+     mock = "builds/vergeio.box"
    }
  }
 ```
-
